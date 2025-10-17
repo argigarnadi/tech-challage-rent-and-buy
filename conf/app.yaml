@@ -1,0 +1,47 @@
+app:
+  name: apps-rent-or-buy
+  mode: debug # debug/release/test, for production use release
+
+transport:
+  server:
+    rest:
+      logging:
+        payloadLogSizeLimit: 2KB
+        stdout: false # Show incoming and outgoing message globally, default is false
+      port:
+        http: 9091
+
+otel:
+  trace:
+    exporter:
+      type: "otlp-grpc"
+      otlp:
+        grpc:
+          address: localhost:4317
+          timeout: 5 # Otel collector connection timeout in seconds
+          clientMaxReceiveMessageSize: 4MB # Must have byte size suffix, such as B, KB, MB, GB
+      disabled: false
+  disabled: true # If true then otel init will be skipped
+
+google:
+  disabled: true
+
+log:
+  level: trace
+
+database:
+  99-test:
+    driver: postgresql
+    address: localhost:5432
+    database: rent-and-buy
+    username: argi
+    password: 1
+    conn:
+      maxIdle: 30
+      maxOpen: 30
+      maxLifeTime: 60000
+    slowThreshold: 200 # In millisecond
+    skipDefaultTransaction: false
+    ignoreRecordNotFoundError: false
+
+

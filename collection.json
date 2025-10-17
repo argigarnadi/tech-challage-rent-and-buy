@@ -1,0 +1,307 @@
+{
+  "info": {
+    "name": "dummy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listing",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/listings?page_num=1&page_size=2&user_id=1",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "listings"
+          ],
+          "query": [
+            {
+              "key": "page_num",
+              "value": "1"
+            },
+            {
+              "key": "page_size",
+              "value": "2"
+            },
+            {
+              "key": "user_id",
+              "value": "1"
+            }
+          ],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Add Listing",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/listings?user_id=2&listing_type=rent&price=10001",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "listings"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "2"
+            },
+            {
+              "key": "listing_type",
+              "value": "rent"
+            },
+            {
+              "key": "price",
+              "value": "10001"
+            }
+          ],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Add User",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/users?name=testing 2",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "testing 2"
+            }
+          ],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Listing User",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/users?page_num=1&page_size=2",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "page_num",
+              "value": "1"
+            },
+            {
+              "key": "page_size",
+              "value": "2"
+            }
+          ],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Listing User By Id",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/users/:id",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "users",
+            ":id"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Public Api Listing",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/public-api/listings",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "public-api",
+            "listings"
+          ],
+          "query": [
+            {
+              "key": "page_size",
+              "value": ""
+            },
+            {
+              "key": "page_num",
+              "value": ""
+            },
+            {
+              "key": "user_id",
+              "value": ""
+            }
+          ],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Public Api Add User",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/public-api/users",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "public-api",
+            "users"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\" : \"testign public api\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Public Api Add Listing",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:9091/v1/public-api/listings",
+          "protocol": "http",
+          "host": [
+            "localhost:9091"
+          ],
+          "path": [
+            "v1",
+            "public-api",
+            "listings"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_id\": 2,\n    \"listing_type\": \"rent - 2\",\n    \"price\": 5000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "variable": []
+}
