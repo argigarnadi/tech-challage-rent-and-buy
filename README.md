@@ -1,6 +1,6 @@
 # Backend Tech Challenge
 
-I using  Go for finish this mini project. A great submission would demonstrate a grasp of the principles of microservice architecture.
+I using  Go for finish this mini project.
 
 ## Introduction
 We're building a system that stores information about users and properties that are available to rent or buy. The system is designed as a set of small web applications that each perform a specific task (otherwise known as "microservices").
