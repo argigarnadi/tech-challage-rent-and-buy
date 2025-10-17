@@ -2,7 +2,7 @@ module tech-challenge-rent-and-buy
 
 go 1.24.6
 
-require gitlab.com/argi.garnadi/go-common v0.0.0-20251017131245-924f8269e35c
+require gitlab.com/argi.garnadi/go-common v0.0.0-20251017135656-ca6e5a1d1fc5
 
 require (
 	cel.dev/expr v0.20.0 // indirect
@@ -130,5 +130,3 @@ require (
 	gorm.io/driver/sqlserver v1.5.3 // indirect
 	gorm.io/gorm v1.25.8 // indirect
 )
-
-replace gitlab.com/argi.garnadi/go-common => /Users/argi/Documents/playground/go-common
